@@ -1,0 +1,45 @@
+[
+  {
+    "courseName": "Web Developmment",
+    "courseDates": "September 9th - December 13th",
+    "location": "Online",
+    "schedule": "Mon - Fri, 9:30am - 5:30pm Central Time", 
+    "tuition": "9900"
+  },
+  {
+    "courseName": "UX Design",
+    "courseDates": "November 05th - March 14th",
+    "location": "Online",
+    "schedule": "Tue & Thu, 6pm - 9pm Sat, 9am - 2pm Mountain Time", 
+    "tuition": "9900"
+  },
+  {
+    "courseName": "Cybersecurity",
+    "courseDates": "November 04th - February 14th",
+    "location": "Online",
+    "schedule": "Monday-Friday 9am-5pm Mountain Time", 
+    "tuition": "9900"
+  },
+  {
+    "courseName": "Software QA",
+    "courseDates": "October 14th - January 24th",
+    "location": "Online",
+    "schedule": "Mon & Wed, 6pm - 9pm Every other Sat, 9am - 12pm Mountain Time", 
+    "tuition": "4900"
+  },
+  {
+    "courseName": "Coding Basics",
+    "courseDates": "September 9th - December 13th",
+    "location": "Online",
+    "schedule": "Mon-Thurs (3 weeks)& Mon/Wed/Sat (4 weeks)", 
+    "tuition": "49"
+  },
+  {
+    "courseName": "Web Developmment",
+    "courseDates": "September 16th - December 20th",
+    "location": "Lehi",
+    "schedule": "Mon - Fri, 9:00am - 5:00pm Mountain Time", 
+    "tuition": "9900"
+  }
+
+]
