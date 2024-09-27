@@ -43,7 +43,7 @@ export default function LoginForm({ onLogin }) {
         </div>  
         <div class="form-section">  
         <h2>Welcome to LearnMountain</h2>
-        <p>Welcome,We are so glad you have decided to take a course with us! Sign in or register to get started below</p>
+        <p>Welcome. We are so glad you have decided to take a course with us! Sign in or register to get started below.</p>
         <br></br>
         <label htmlFor="studentId">Student Id:</label>  
         <input  

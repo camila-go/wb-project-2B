@@ -80,18 +80,11 @@ export default function AllCoursesPage() {
               <td style={{ border: '1px solid black', padding: '8px' }}>{schedule}</td>  
               <td style={{ border: '1px solid black', padding: '8px' }}>{tuition}</td>  
               <td style={{ border: '1px solid black', padding: '8px' }}>  
-                <button onClick={() => handleRegister(studentId, courseId)}
+                <button class="button" onClick={() => handleRegister(studentId, courseId)}
                    style={{  
-                    backgroundColor: 'black', // Background color of the button  
-                    color: 'white', // Text color  
-                    padding: '10px 20px', // Padding inside the button  
-                    border: 'none', // No border  
-                    borderRadius: '5px', // Rounded corners  
-                    cursor: 'pointer', // Pointer cursor on hover  
-                    fontStyle: 'bold',
-                    fontSize: '16px' // Optional: font size  
+                  fontSize: '14px' // Optional: font size  
                 }}>  
-                  Register for this course</button>  
+                  Register now</button>  
               </td>  
             </tr>  
           ))}  

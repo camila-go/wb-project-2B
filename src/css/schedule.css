@@ -33,7 +33,7 @@ h1 {
 }  
 
 .schedule-table th {  
-    background-color: #4CAF50;  
+    background-color: #555555;  
     color: white;  
 }  
 
@@ -90,7 +90,7 @@ h1 {
 }  
 
 .schedule-table th {  
-    background-color: #4CAF50;  
+    background-color: #555555;  
     color: white;  
 }  
 
@@ -105,23 +105,25 @@ h1 {
 
 /* Base button styles */  
 .button {  
-    display: inline-block;  
-    padding: 10px 20px;  /* Padding for click area */  
-    font-size: 16px;     /* Font size */  
-    color: white;        /* Text color */  
-    background-color: #007BFF; /* Primary button color */  
-    border: none;        /* No border */  
-    border-radius: 5px;  /* Rounded corners */  
-    text-align: center;  /* Center text alignment */  
-    text-decoration: none;/* No underline */  
-    cursor: pointer;     /* Pointer cursor on hover */  
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */  
+    padding: .8rem 4rem;  
+    background-color: #3270a1 ; /* Button color */  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-weight: 600;
+    font-family: 'Raleway'; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Initial shadow */  
+    transition: box-shadow 0.3s ease; /* Smooth transition */  
+    cursor: pointer; /* Change cursor on hover */  
 }  
 
-/* Hover state */  
+
 .button:hover {  
-    background-color: #0056b3; /* Darker shade on hover */  
+    background-color: #0177A9; /* Darker shade on hover */  
+    color:#ffff;
 }  
+
 
 /* Active/pressed state */  
 .button:active {  
@@ -147,4 +149,45 @@ h1 {
     .schedule-table th, .schedule-table td {  
         font-size: 12px; /* Adjust font size for smaller screens */  
     }  
+}
+
+.buttonDrop {  
+    padding: .8rem 4rem;  
+    background-color: #711e1e ; /* Button color */  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-weight: 600;
+    font-family: 'Raleway'; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Initial shadow */  
+    transition: box-shadow 0.3s ease; /* Smooth transition */  
+    cursor: pointer; /* Change cursor on hover */  
+}  
+
+
+.buttonDrop:hover {  
+    background-color: #521313; /* Darker shade on hover */  
+    color:#ffff;
+}  
+
+
+/* Active/pressed state */  
+.buttonDrop:active {  
+    background-color: #004085; /* Even darker shade on press */  
+    transform: scale(0.98);    /* Slightly reduce button size */  
+}  
+
+/* Focus state */  
+.buttonDrop:focus {  
+    outline: none;             /* Remove default focus outline */  
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Custom focus outline */  
+}  
+
+/* Disabled state */  
+.button:disabled {  
+    background-color: #c0c0c0; /* Light gray for disabled */  
+    color: #666666;            /* Darker gray text */  
+    cursor: not-allowed;       /* Not-allowed cursor */  
+    pointer-events: none;      /* Prevent any mouse events */  
 }

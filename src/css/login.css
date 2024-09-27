@@ -17,30 +17,35 @@ body {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */  
     max-width: 1200px;  
     margin: 0 auto;  
+    display: flex;                /* Enables flexbox layout */  
+    justify-content: center;      /* Centers items horizontally */  
+    align-items: center;   
 }  
 
 .image-section {  
     background-size: cover;
     flex: 1; /* Takes up available space */  
     min-width: 300px; /* Minimum width for the image section */  
-    height:auto;
+    max-height: 600px;
     background-position: center; 
     width:100%;/* Center the image */  
-    display:flex;
 
 }  
 
 .image-section img {  
     width: 100%; /* Responsive image */  
     height: auto; /* Maintain aspect ratio */  
+    max-height: 600px;
 }  
 
 .form-section {  
     flex: 1; /* Takes up available space */  
     min-width: 300px; /* Minimum width for the form section */  
-    padding: 20px;  
+    padding: 1.5rem;
     background-color: #f9f9f9; /* Light background for contrast */  
     border-left: 1px solid #ddd; /* Optional border for separation */  
+    /* display: flex;                /* Enables flexbox layout */  
+ 
 }  
 
 h2 {  
@@ -93,6 +98,8 @@ select {
     .form-section {  
         border-left: none; /* Remove border on mobile */  
         border-top: 1px solid #ddd; /* Optional top border for separation */  
+        
+    
     }  
 }
 
@@ -101,16 +108,18 @@ select {
     font-size: 16px; /* Increase the font size */  
     padding: 12px; /* Add padding to increase the size */  
     width: 100%; /* Make the input field take the full width of the container */  
+    max-width: 300px;
     height: 50px; /* Set a fixed height */  
-    border: 2px solid #007BFF; /* Change border color */  
+    border: 2px solid #555555; /* Change border color */  
     border-radius: 5px; /* Rounded corners */  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */  
-    transition: border-color 0.3s ease; /* Transition for hover effect */  
+    transition: border-color 0.3s ease; /* Transition for hover effect */ 
+    display: flex; 
 }  
 
 /* Optional: Adding a hover effect */  
 .input-large:hover {  
-    border-color: #0056b3; /* Darker border on hover */  
+    border-color: #0177A9; /* Darker border on hover */  
 }  
 
 /* Optional: Adding focus effect */  

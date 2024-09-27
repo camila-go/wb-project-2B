@@ -87,15 +87,10 @@ export default function YourStudentSchedulePage() {
                   <td style={{ border: '1px solid black', padding: '8px' }}>{course.courseDates}</td>  
                   <td style={{ border: '1px solid black', padding: '8px' }}>{course.schedule}</td>  
                   <td style={{ border: '1px solid black', padding: '8px' }}>  
-                    <button onClick={() => handleDrop(studentId, course.courseId)}   
+                    <button class="buttonDrop" onClick={() => handleDrop(studentId, course.courseId)}   
                       style={{  
-                        backgroundColor: 'red',  
-                        color: 'white',  
-                        padding: '10px 20px',  
-                        border: 'none',  
-                        borderRadius: '5px',  
-                        cursor: 'pointer',  
-                        fontSize: '16px'  
+                        backgroundColor: 'light red', 
+                        fontSize: '14px'  
                     }}>  
                       Drop this course  
                     </button>  

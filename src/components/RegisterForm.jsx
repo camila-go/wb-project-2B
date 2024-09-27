@@ -42,11 +42,12 @@ export default function RegisterForm({ onSubmit }) {
     <div>
     <div class="container">
     <div class="image-section">  
-            <img src="/src/assets/images/Register.jpg" alt="Descriptive Alt Text" />  
+            <img src="/src/assets/images/Register.webp" alt="Descriptive Alt Text" />  
         </div> 
         <div class="form-section">
         <h2>Welcome to LearnMountain</h2>
         <p>Welcome, register or sign in to get started</p>
+        <br></br>
       <div>  
         <label htmlFor="firstName">First Name:</label>  
         <input class="input-large" type="text" id="firstName" value={firstName} onChange={e => setFirstName(e.target.value)} required />  
