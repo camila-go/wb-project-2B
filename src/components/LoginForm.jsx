@@ -39,7 +39,7 @@ export default function LoginForm({ onLogin }) {
       <div>  
       <div class="container">  
         <div class="image-section">  
-            <img src="your-image-url.jpg" alt="Descriptive Alt Text" />  
+            <img src="/src/assets/images/LearnMimage.jpg" alt="Descriptive Alt Text" />  
         </div>  
         <div class="form-section">  
         <h2>Welcome to LearnMountain</h2>

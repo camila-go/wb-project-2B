@@ -1,6 +1,6 @@
 a {
   font-weight: 500;
-  color: #3f51b5;
+  color: #0177A9;
   text-decoration: inherit;
 }
 
@@ -11,4 +11,12 @@ a:hover {
 
 a.active {
   font-weight: bold;
+}
+
+
+.ralewayFont {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:200;
+  font-style: normal;
 }
