@@ -1,7 +1,7 @@
 
 import { useState } from 'react';  
 import { useNavigate, Link } from 'react-router-dom';   
-
+import '/src/css/login.css'; 
 
 export default function LoginForm({ onLogin }) {  
   const [studentIdValue, setStudentIdValue] = useState('');  
@@ -37,6 +37,11 @@ export default function LoginForm({ onLogin }) {
     
     <form onSubmit={handleSubmit}>  
       <div>  
+      <div class="container">  
+        <div class="image-section">  
+            <img src="your-image-url.jpg" alt="Descriptive Alt Text" />  
+        </div>  
+        <div class="form-section">  
         <h2>Welcome to LearnMountain</h2>
         <p>Welcome,We are so glad you have decided to take a course with us! Sign in or register to get started below</p>
         <br></br>
@@ -49,7 +54,7 @@ export default function LoginForm({ onLogin }) {
           onChange={(e) => setStudentIdValue(e.target.value)}  
           required  
         />  
-      </div>  
+       
       <div>  
         <label htmlFor="password">Password:</label>  
         <input  
@@ -69,6 +74,9 @@ export default function LoginForm({ onLogin }) {
         <p>  
           No account? <Link to="/register">Register here</Link>  
         </p>  
+      </div> 
+      </div> 
+      </div> 
       </div>  
     </form>  
   );  

@@ -1,0 +1,150 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;  
+    padding: 20px;  
+}  
+
+.schedule-container {  
+    max-width: 800px;  
+    margin: 0 auto;  
+    padding: 20px;  
+    background: white;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    border-radius: 8px;  
+}  
+
+h1 {  
+    text-align: center;  
+    color: #333;  
+}  
+
+.schedule-table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-top: 20px;  
+}  
+
+.schedule-table th,  
+.schedule-table td {  
+    border: 1px solid #ddd;  
+    padding: 8px;  
+    text-align: center;  
+}  
+
+.schedule-table th {  
+    background-color: #4CAF50;  
+    color: white;  
+}  
+
+.schedule-table tr:nth-child(even) {  
+    background-color: #f2f2f2;  
+}  
+
+.schedule-table tr:hover {  
+    background-color: #ddd;  
+}  
+
+@media (max-width: 600px) {  
+    .schedule-table th, .schedule-table td {  
+        font-size: 12px; /* Adjust font size for smaller screens */  
+    }  
+}body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;  
+    padding: 20px;  
+}  
+
+.schedule-container {  
+    max-width: 800px;  
+    margin: 0 auto;  
+    padding: 20px;  
+    background: white;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    border-radius: 8px;  
+}  
+
+h1 {  
+    text-align: center;  
+    color: #333;  
+}  
+
+.table-responsive {  
+    overflow-x: auto;  /* Enables horizontal scrolling */  
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */  
+}  
+
+.schedule-table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-top: 20px;  
+    min-width: 600px; /* Ensures the table maintains a minimum width */  
+}  
+
+.schedule-table th,  
+.schedule-table td {  
+    border: 1px solid #ddd;  
+    padding: 8px;  
+    text-align: center;  
+}  
+
+.schedule-table th {  
+    background-color: #4CAF50;  
+    color: white;  
+}  
+
+.schedule-table tr:nth-child(even) {  
+    background-color: #f2f2f2;  
+}  
+
+.schedule-table tr:hover {  
+    background-color: #ddd;  
+}  
+
+
+/* Base button styles */  
+.button {  
+    display: inline-block;  
+    padding: 10px 20px;  /* Padding for click area */  
+    font-size: 16px;     /* Font size */  
+    color: white;        /* Text color */  
+    background-color: #007BFF; /* Primary button color */  
+    border: none;        /* No border */  
+    border-radius: 5px;  /* Rounded corners */  
+    text-align: center;  /* Center text alignment */  
+    text-decoration: none;/* No underline */  
+    cursor: pointer;     /* Pointer cursor on hover */  
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */  
+}  
+
+/* Hover state */  
+.button:hover {  
+    background-color: #0056b3; /* Darker shade on hover */  
+}  
+
+/* Active/pressed state */  
+.button:active {  
+    background-color: #004085; /* Even darker shade on press */  
+    transform: scale(0.98);    /* Slightly reduce button size */  
+}  
+
+/* Focus state */  
+.button:focus {  
+    outline: none;             /* Remove default focus outline */  
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Custom focus outline */  
+}  
+
+/* Disabled state */  
+.button:disabled {  
+    background-color: #c0c0c0; /* Light gray for disabled */  
+    color: #666666;            /* Darker gray text */  
+    cursor: not-allowed;       /* Not-allowed cursor */  
+    pointer-events: none;      /* Prevent any mouse events */  
+}
+
+@media (max-width: 600px) {  
+    .schedule-table th, .schedule-table td {  
+        font-size: 12px; /* Adjust font size for smaller screens */  
+    }  
+}

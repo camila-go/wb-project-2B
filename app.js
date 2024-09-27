@@ -146,6 +146,58 @@ app.post('/api/courseReg', loginRequired, async (req, res) => {
 });
 
 // *********
+//API to drop a scheduled class for a student
+app.post('/api/courseDrop', loginRequired, async (req, res) => {  
+  const { studentId } = req.session;  
+  const { courseId } = req.body;  
+
+  // Check if courseId and studentId are provided  
+  if (!courseId || !studentId) {  
+    return res.status(400).json({ message: 'Course ID and Student ID are required.' });  
+  }  
+  
+  try {  
+    // Validate that the course exists  
+    const course = await Course.findByPk(courseId);  
+    if (!course) {  
+      return res.status(404).json({ message: 'Course not found.' });  
+    }  
+
+    // Check if the student already registered for this course (if needed)  
+    const existingReg = await CourseRegistration.findOne({  
+      where: {  
+        courseId: courseId,  
+        studentId: studentId,  
+      },  
+    });  
+
+    //if (existingReg) {  
+    //  return res.status(409).json({ message: 'Student is already registered for this course.' });  
+    //}  
+
+   
+      // Ensure the implementation is correct and handles errors  
+    async function dropCourseReg(courseId, studentId) {  
+    return await CourseRegistration.destroy({   
+    where: {   
+      courseId: courseId, // Make sure you are specifying the condition correctly  
+      studentId: studentId   
+    }   
+  });  
+}
+
+    // Drop the student from the course  
+    const courseReg = await dropCourseReg(courseId, studentId);  
+    res.status(201).json({ courseId, courseReg });  
+  
+  } catch (error) {  
+    console.error('Error registering student:', error);  
+    res.status(500).json({ message: 'Internal server error.' });  
+  }  
+});
+
+
+// *********
 // .. for API to register a new student
 // Function to get a student by their email  
 async function getStudentByEmail(email) {  

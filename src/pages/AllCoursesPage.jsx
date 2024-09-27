@@ -1,12 +1,14 @@
 
 import { useEffect, useState } from 'react';  
-import { Link, useLoaderData } from 'react-router-dom';  
-import axios from 'axios';  
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';  
+import axios from 'axios';
+import '/src/css/schedule.css';   
 
 export default function AllCoursesPage() {  
   const [studentId, setStudentId] = useState(null);  
   const [firstName, setFirstName] = useState(null);
   const { courses } = useLoaderData();  
+  const navigate = useNavigate(); 
 
   useEffect(() => {  
     retrieveStudentId();  
@@ -23,36 +25,40 @@ export default function AllCoursesPage() {
       console.error('Error fetching student ID:', error);  
     }  
   }  
-
-
-  const handleRegister = async (studentId,courseId) => {  
+  const handleRegister = async (studentId, courseId) => {  
     try {  
       // Sending registration request to the server  
       const response = await axios.post('/api/courseReg', {  
-         studentId,  
-         courseId, 
+        studentId,  
+        courseId,  
       });  
-
-      if (!response.ok) {  
-        // If the server responds with an error status  
-        const errorData = await response.json();  
-        alert(errorData.message); // Alert the message from the server  
-        return; // Stop the execution  
-    }  
-
+  
       // Notify the user that registration was successful  
-      alert(`Successfully registered for course ID: ${response.data.courseId}`);  
+      alert(`Successfully registered for course ID: ${response.data.courseReg.courseId}`); // Assuming courseReg contains courseId  
+      // Navigate to YourStudentSchedulePage  
+      navigate('/me'); // Replace with the correct path  
+
     } catch (error) {  
       console.error('Error registering for course:', error);  
-      alert('Failed to register for course. Please try again.');  
+  
+      // Handle specific error response from the server  
+      if (error.response) {  
+        // Server responded with a status other than 2xx  
+        alert(`Failed to register for course: ${error.response.data.message || 'Please try again.'}`);  
+      } else {  
+        // Some other error occurred (network error, etc.)  
+        alert('Failed to register for course. Please try again.');  
+      }  
     }  
-  };  
+  };
 
   return (  
-    <>  
+    <> 
+    <div className="schedule-container"> 
+    <div className="table-responsive">
       <h2>Welcome {firstName}, Student ID: {studentId}</h2>  
       <p>All courses listed below:</p>        
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>  
+      <table class="schedule-table" style={{ width: '100%', borderCollapse: 'collapse' }}>  
         <thead>  
           <tr>  
             <th style={{ border: '1px solid black', padding: '8px' }}>Course ID</th>  
@@ -76,12 +82,13 @@ export default function AllCoursesPage() {
               <td style={{ border: '1px solid black', padding: '8px' }}>  
                 <button onClick={() => handleRegister(studentId, courseId)}
                    style={{  
-                    backgroundColor: 'blue', // Background color of the button  
+                    backgroundColor: 'black', // Background color of the button  
                     color: 'white', // Text color  
                     padding: '10px 20px', // Padding inside the button  
                     border: 'none', // No border  
                     borderRadius: '5px', // Rounded corners  
                     cursor: 'pointer', // Pointer cursor on hover  
+                    fontStyle: 'bold',
                     fontSize: '16px' // Optional: font size  
                 }}>  
                   Register for this course</button>  
@@ -90,6 +97,8 @@ export default function AllCoursesPage() {
           ))}  
         </tbody>  
       </table>  
+      </div>
+      </div>
     </>  
   );  
 }
