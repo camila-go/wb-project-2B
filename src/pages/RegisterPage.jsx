@@ -18,8 +18,7 @@ export default function RegisterPage() {
 
   return (
     <>
-        <h2>Welcome to LearnMountain</h2>
-        <p>Welcome, register or sign in to get started</p>
+        
       <RegisterForm onSubmit={handleRegistration} />
     </>
   );

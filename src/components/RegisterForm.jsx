@@ -1,5 +1,6 @@
 import React, { useState } from 'react';  
 import { Link } from 'react-router-dom';  
+import '/src/css/login.css'; 
 
 export default function RegisterForm({ onSubmit }) {  
   const [firstName, setFirstName] = useState('');  
@@ -38,31 +39,44 @@ export default function RegisterForm({ onSubmit }) {
 
   return (  
     <form onSubmit={handleSubmit}>  
+    <div>
+    <div class="container">
+    <div class="image-section">  
+            <img src="/src/assets/images/Register.jpg" alt="Descriptive Alt Text" />  
+        </div> 
+        <div class="form-section">
+        <h2>Welcome to LearnMountain</h2>
+        <p>Welcome, register or sign in to get started</p>
       <div>  
         <label htmlFor="firstName">First Name:</label>  
-        <input type="text" id="firstName" value={firstName} onChange={e => setFirstName(e.target.value)} required />  
+        <input class="input-large" type="text" id="firstName" value={firstName} onChange={e => setFirstName(e.target.value)} required />  
       </div>  
       <div>  
         <label htmlFor="lastName">Last Name:</label>  
-        <input type="text" id="lastName" value={lastName} onChange={e => setLastName(e.target.value)} required />  
+        <input class="input-large" type="text" id="lastName" value={lastName} onChange={e => setLastName(e.target.value)} required />  
       </div>  
       <div>  
         <label htmlFor="email">Email:</label>  
-        <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />  
+        <input class="input-large" type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} required />  
       </div>  
       <div>  
         <label htmlFor="password">Password:</label>  
-        <input type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} required />  
+        <input class="input-large" type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} required />  
       </div>  
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} 
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>} {/* Show success message */}   
-      <button type="submit" disabled={isLoading}>  
+      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>} {/* Show success message */}  
+      <div><br></br></div> 
+      <button class="button" type="submit" disabled={isLoading}>  
         {isLoading ? 'Registering...' : 'Register'}  
       </button>  
+      <div><br></br></div>
       <div>  
         <p>  
          Already have an account? <Link to="/login">login here</Link>  
        </p>  
+      </div>
+      </div>
+      </div> 
       </div>
     </form>  
   );  

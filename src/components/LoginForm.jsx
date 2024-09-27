@@ -47,6 +47,7 @@ export default function LoginForm({ onLogin }) {
         <br></br>
         <label htmlFor="studentId">Student Id:</label>  
         <input  
+          class="input-large"
           name="studentId"  
           id="studentId"  
           type="text"  
@@ -58,6 +59,7 @@ export default function LoginForm({ onLogin }) {
       <div>  
         <label htmlFor="password">Password:</label>  
         <input  
+          class="input-large"
           name="password"  
           id="password"  
           type="password"  
@@ -66,10 +68,12 @@ export default function LoginForm({ onLogin }) {
           required  
         />  
       </div>  
+      <div><br></br></div>
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}  
-      <button type="submit" disabled={isLoading}>  
+      <button class="button" type="submit" disabled={isLoading}>  
         {isLoading ? 'Logging In...' : 'Log In'}  
       </button>  
+      <div><br></br></div>
       <div>  
         <p>  
           No account? <Link to="/register">Register here</Link>  

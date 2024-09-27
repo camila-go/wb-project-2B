@@ -9,6 +9,7 @@
 body {  
     font-family: 'Raleway', sans-serif;  
     line-height: 1.6;  
+    color: #555555;
 }  
 
 .container {  
@@ -19,8 +20,14 @@ body {
 }  
 
 .image-section {  
+    background-size: cover;
     flex: 1; /* Takes up available space */  
     min-width: 300px; /* Minimum width for the image section */  
+    height:auto;
+    background-position: center; 
+    width:100%;/* Center the image */  
+    display:flex;
+
 }  
 
 .image-section img {  
@@ -56,19 +63,26 @@ select {
     border-radius: 5px;  
 }  
 
-button {  
-    padding: 10px;  
-    background-color: #0177A9; /* Button color */  
+.button {  
+    padding: .8rem 4rem;  
+    background-color: #3270a1 ; /* Button color */  
     color: white;  
     border: none;  
     border-radius: 5px;  
     cursor: pointer;  
-    transition: background-color 0.3s;  
+    font-weight: 600;
+    font-family: 'Raleway'; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Initial shadow */  
+    transition: box-shadow 0.3s ease; /* Smooth transition */  
+    cursor: pointer; /* Change cursor on hover */  
 }  
 
-button:hover {  
-    background-color: #0056b3; /* Darker shade on hover */  
+
+.button:hover {  
+    background-color: #0177A9; /* Darker shade on hover */  
+    color:#ffff;
 }  
+
 
 /* Responsive styles */  
 @media (max-width: 768px) {  
@@ -80,4 +94,28 @@ button:hover {
         border-left: none; /* Remove border on mobile */  
         border-top: 1px solid #ddd; /* Optional top border for separation */  
     }  
+}
+
+/* Styling input fields */  
+.input-large {  
+    font-size: 16px; /* Increase the font size */  
+    padding: 12px; /* Add padding to increase the size */  
+    width: 100%; /* Make the input field take the full width of the container */  
+    height: 50px; /* Set a fixed height */  
+    border: 2px solid #007BFF; /* Change border color */  
+    border-radius: 5px; /* Rounded corners */  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */  
+    transition: border-color 0.3s ease; /* Transition for hover effect */  
+}  
+
+/* Optional: Adding a hover effect */  
+.input-large:hover {  
+    border-color: #0056b3; /* Darker border on hover */  
+}  
+
+/* Optional: Adding focus effect */  
+.input-large:focus {  
+    outline: none; /* Remove default outline */  
+    border-color: #0056b3; /* Change border color on focus */  
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Add a shadow on focus */  
 }
