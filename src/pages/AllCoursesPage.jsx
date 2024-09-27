@@ -57,7 +57,7 @@ export default function AllCoursesPage() {
     <div className="schedule-container"> 
     <div className="table-responsive">
       <h2>Welcome {firstName}, Student ID: {studentId}</h2>  
-      <p>All courses listed below:</p>        
+      <p>Sign up for your preferred course or if you already registered <Link to="/me">view your schedule</Link> <br></br>All courses listed below: </p>         
       <table class="schedule-table" style={{ width: '100%', borderCollapse: 'collapse' }}>  
         <thead>  
           <tr>  

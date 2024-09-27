@@ -1,0 +1,26 @@
+.Logoutbutton {  
+    padding: .8rem 4rem;  
+    background-color: white ; /* Button color */  
+    color: black;  
+    border: black;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-weight: 600;
+    font-family: 'Raleway'; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Initial shadow */  
+    transition: box-shadow 0.3s ease; /* Smooth transition */  
+    cursor: pointer; /* Change cursor on hover */  
+    max-width: 290px;
+}  
+
+
+.Logoutbutton:hover {  
+    background-color: #011e2b; /* Darker shade on hover */  
+    color:#ffff;
+}  
+
+.buttonAlign {
+    display: flex;         /* Use flexbox for layout */  
+    justify-content: flex-end; /* Align items to the right */  
+    width: 100%;     
+}

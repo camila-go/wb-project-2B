@@ -1,7 +1,8 @@
+import '/src/css/logout.css'; 
 export default function LogoutButton({ onLogout }) {
   return (
     <form onSubmit={onLogout}>
-      <button type="submit">Log Out</button>
+      <button class="Logoutbutton" type="submit">Log out</button>
     </form>
   );
 }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import LogoutButton from './components/LogoutButton.jsx';
-
+import '/src/css/logout.css'; 
 export default function App() {
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ export default function App() {
     <>
       <nav>
         <ul>
-          <li>
+          {/* <li>
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
@@ -31,14 +31,14 @@ export default function App() {
           </li>
           <li>
             <NavLink to="/me">Your Schedule</NavLink>
-          </li>
-          <li>
+          </li> */}
+        <div class="buttonAlign">
             <LogoutButton onLogout={handleLogout} />
-          </li>
+            </div>
         </ul>
       </nav>
 
-      <hr />
+      {/* <hr /> */}
 
       <main>
         <Outlet />
